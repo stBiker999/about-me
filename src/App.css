@@ -1,8 +1,38 @@
+body,
+#root {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Avenir", "Helvetica", "Arial", sans-serif;
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+  color: #f3f3f3;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}
+
+nav {
+  background: rgba(20, 22, 32, 0.85);
+  padding: 1.2em 0;
+  box-shadow: 0 2px 24px #1e90ff33;
+  border-bottom: 1px solid #222b44;
+  margin-bottom: 32px;
+}
+nav a {
+  color: #b8e0ff;
+  font-weight: bold;
+  margin: 0 1.2em;
+  text-shadow: 0 0 12px #1e90ff88;
+  transition: color 0.2s;
+  letter-spacing: 0.08em;
+}
+nav a:hover {
+  color: #fff;
+  text-shadow: 0 0 24px #1e90ffcc;
 }
 
 .logo {
@@ -33,21 +63,11 @@
   }
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-/* シーシャ本体関連のCSSを削除 */
-
 .smoke {
   position: relative;
-  width: 220px;
+  width: 320px;
   height: 120px;
-  margin: 60px auto 20px auto;
+  margin: 40px auto 10px auto;
   z-index: 1;
   overflow: visible;
 }
@@ -57,25 +77,25 @@
   position: absolute;
   left: 50%;
   bottom: 0;
-  width: 120px;
-  height: 90px;
+  width: 180px;
+  height: 100px;
   background: radial-gradient(
     circle,
-    rgba(200, 200, 200, 0.5) 60%,
+    rgba(200, 220, 255, 0.18) 60%,
     transparent 100%
   );
   border-radius: 50%;
   transform: translateX(-50%) scale(1);
   animation: smoke-move 4s infinite ease-in-out;
-  filter: blur(4px);
+  filter: blur(8px);
   z-index: 2;
 }
 .smoke::after {
-  width: 180px;
-  height: 120px;
-  opacity: 0.3;
+  width: 260px;
+  height: 140px;
+  opacity: 0.22;
   animation-delay: 2s;
-  filter: blur(8px);
+  filter: blur(16px);
 }
 
 @keyframes smoke-move {
@@ -84,15 +104,15 @@
     opacity: 0.7;
   }
   40% {
-    transform: translateX(-50%) scale(1.2) translateY(-30px);
+    transform: translateX(-50%) scale(1.2) translateY(-40px);
     opacity: 0.5;
   }
   80% {
-    transform: translateX(-50%) scale(1.4) translateY(-80px);
-    opacity: 0.2;
+    transform: translateX(-50%) scale(1.4) translateY(-120px);
+    opacity: 0.15;
   }
   100% {
-    transform: translateX(-50%) scale(1.5) translateY(-120px);
+    transform: translateX(-50%) scale(1.6) translateY(-200px);
     opacity: 0;
   }
 }
@@ -102,16 +122,17 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  font-size: 2.4rem;
-  color: #444;
+  font-size: 2.2rem;
+  color: #b8e0ff;
   opacity: 0;
   animation: name-fade 3s 1.5s forwards;
+  font-family: "Press Start 2P", "monospace", "sans-serif";
   font-weight: bold;
-  text-shadow: 0 0 16px #fff, 0 0 32px #ccc, 0 0 8px #b0aeb1;
-  letter-spacing: 0.15em;
+  text-shadow: 0 0 24px #fff, 0 0 32px #1e90ff, 0 0 8px #b0aeb1;
+  letter-spacing: 0.12em;
   white-space: nowrap;
   z-index: 3;
-  font-family: 'Press Start 2P', 'monospace', 'sans-serif';
+  filter: drop-shadow(0 0 8px #1e90ff88);
 }
 
 @keyframes name-fade {
@@ -132,13 +153,246 @@
   }
 }
 
+.shisha-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  min-height: 100vh;
+  background: none;
+}
+
+.about-list,
+.card,
+.read-the-docs,
+p {
+  background: rgba(30, 30, 40, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #0006;
+  padding: 18px 28px;
+  margin: 18px auto;
+  color: #e0e7ef;
+  max-width: 420px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
 .about-list {
-  margin-top: 30px;
-  margin-bottom: 10px;
   list-style: disc inside;
   text-align: left;
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 8px;
-  padding: 12px 24px;
-  box-shadow: 0 2px 8px #e0e7ef88;
+  background: rgba(40, 60, 80, 0.7);
+  color: #b8e0ff;
+  font-weight: bold;
+  box-shadow: 0 2px 12px #1e90ff33;
+}
+
+.card {
+  background: rgba(40, 60, 80, 0.5);
+  color: #b8e0ff;
+  border: 1px solid #1e90ff44;
+}
+
+button {
+  background: #1e90ff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.7em 1.5em;
+  font-size: 1.1em;
+  font-weight: bold;
+  box-shadow: 0 2px 8px #1e90ff44;
+  transition: background 0.2s;
+}
+button:hover {
+  background: #63b3ed;
+  color: #232526;
+}
+
+h1,
+h2,
+h3 {
+  color: #b8e0ff;
+  text-shadow: 0 0 12px #1e90ff88;
+  font-family: "Press Start 2P", "monospace", "sans-serif";
+  margin-bottom: 18px;
+}
+
+.main-title {
+  font-family: "Press Start 2P", "monospace", "sans-serif";
+  font-size: 2.1rem;
+  color: #b8e0ff;
+  text-shadow: 0 0 18px #1e90ffcc, 0 0 32px #1e90ff88;
+  margin-bottom: 32px;
+  letter-spacing: 0.08em;
+}
+
+.home-visual-bg {
+  position: relative;
+  width: 100vw;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: none;
+}
+
+.home-smoke {
+  position: absolute;
+  left: 50%;
+  bottom: 18vh;
+  transform: translate(-50%, 0);
+  width: 520px;
+  height: 220px;
+  opacity: 0.7;
+  z-index: 2;
+  pointer-events: none;
+}
+.home-smoke::before,
+.home-smoke::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 420px;
+  height: 180px;
+  background: radial-gradient(
+    circle,
+    rgba(200, 220, 255, 0.1) 60%,
+    transparent 100%
+  );
+  border-radius: 50%;
+  transform: translateX(-50%) scale(1);
+  animation: smoke-move 7s infinite ease-in-out;
+  filter: blur(24px);
+  z-index: 2;
+}
+.home-smoke::after {
+  width: 520px;
+  height: 220px;
+  opacity: 0.13;
+  animation-delay: 3.5s;
+  filter: blur(40px);
+}
+
+.neon-circle {
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  box-shadow: 0 0 120px 32px #1e90ff55, 0 0 180px 64px #b8e0ff33,
+    0 0 240px 80px #1e90ff22;
+  border: 2px solid #b8e0ff44;
+  z-index: 1;
+  pointer-events: none;
+  animation: neon-pulse 4s infinite alternate;
+  background: radial-gradient(
+    circle,
+    rgba(30, 40, 60, 0.25) 60%,
+    transparent 100%
+  );
+  filter: blur(2px);
+}
+.neon-circle2 {
+  width: 700px;
+  height: 700px;
+  box-shadow: 0 0 320px 80px #1e90ff33, 0 0 400px 120px #b8e0ff22;
+  border: 2px solid #1e90ff22;
+  animation-delay: 2s;
+  filter: blur(4px);
+}
+
+@keyframes neon-pulse {
+  0% {
+    box-shadow: 0 0 120px 32px #1e90ff55, 0 0 180px 64px #b8e0ff33;
+    opacity: 0.7;
+  }
+  100% {
+    box-shadow: 0 0 240px 80px #1e90ff99, 0 0 400px 120px #b8e0ff55;
+    opacity: 1;
+  }
+}
+
+.shisha-art {
+  position: absolute;
+  left: 50%;
+  bottom: 10vh;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 220px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.shisha-base {
+  width: 80px;
+  height: 50px;
+  background: radial-gradient(circle at 60% 60%, #b0aeb1 60%, #7e7b7c 100%);
+  border-radius: 0 0 40px 40px;
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  box-shadow: 0 8px 24px 0 #b0aeb1aa;
+  border-bottom: 5px solid #888;
+}
+.shisha-neck {
+  width: 24px;
+  height: 100px;
+  background: linear-gradient(180deg, #b0aeb1 60%, #e0e7ef 100%);
+  border-radius: 14px;
+  position: absolute;
+  left: 48px;
+  bottom: 50px;
+  border: 2px solid #888;
+}
+.shisha-bowl {
+  width: 36px;
+  height: 24px;
+  background: #b0aeb1;
+  border-radius: 18px 18px 12px 12px/18px 18px 24px 24px;
+  position: absolute;
+  left: 42px;
+  bottom: 148px;
+  border: 2px solid #888;
+  z-index: 2;
+}
+.shisha-coal {
+  width: 18px;
+  height: 10px;
+  background: linear-gradient(90deg, #ffb347 60%, #ff6961 100%);
+  border-radius: 6px 6px 8px 8px;
+  position: absolute;
+  left: 51px;
+  bottom: 164px;
+  box-shadow: 0 0 12px 2px #ffb34788, 0 0 8px 2px #ff696188;
+  z-index: 3;
+}
+.shisha-hose {
+  width: 80px;
+  height: 80px;
+  border: 5px solid #b0aeb1;
+  border-radius: 0 0 80px 80px;
+  border-top: none;
+  border-left: none;
+  position: absolute;
+  left: 80px;
+  bottom: 40px;
+  transform: rotate(20deg);
+  opacity: 0.7;
+  z-index: 1;
+}
+
+.home-shisha-bg {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  background: radial-gradient(ellipse at 60% 80%, #2a2d3a 60%, #181a22 100%);
 }

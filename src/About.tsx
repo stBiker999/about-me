@@ -7,12 +7,26 @@ const About: React.FC = () => {
       <div className="smoke">
         <span className="smoke-text">Sota Kimura</span>
       </div>
-      <ul className="about-list">
-        <li>趣味：バイク、シーシャ、酒</li>
-        <li>経歴：2022年からエンジニア学生してます</li>
-        <li>今年の目標: バイク2台購入</li>
-      </ul>
-      <p>救いようがないクズですが、よろしくお願いします</p>
+      <div className="smoke">
+        <span className="smoke-text" style={{ animationDelay: "2.2s" }}>
+          趣味：バイク、シーシャ、酒
+        </span>
+      </div>
+      <div className="smoke">
+        <span className="smoke-text" style={{ animationDelay: "3.5s" }}>
+          経歴：2022年からエンジニア学生してます
+        </span>
+      </div>
+      <div className="smoke">
+        <span className="smoke-text" style={{ animationDelay: "4.8s" }}>
+          今年の目標: バイク2台購入
+        </span>
+      </div>
+      <div className="smoke">
+        <span className="smoke-text" style={{ animationDelay: "6s" }}>
+          救いようがないクズですが、よろしくお願いします
+        </span>
+      </div>
     </div>
   );
 };
