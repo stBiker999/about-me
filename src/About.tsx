@@ -1,4 +1,5 @@
 import React from "react";
+import "@fontsource/press-start-2p/latin.css";
 
 const About: React.FC = () => {
   return (
