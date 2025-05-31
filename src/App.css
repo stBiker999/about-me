@@ -41,6 +41,7 @@
   color: #888;
 }
 
+/* シーシャ本体 */
 .shisha-container {
   display: flex;
   flex-direction: column;
@@ -78,7 +79,7 @@
   border: 2px solid #888;
 }
 
-/* 装飾：ホース */
+/* ホース装飾 */
 .shisha-body::after {
   content: "";
   position: absolute;
@@ -94,12 +95,14 @@
   opacity: 0.7;
 }
 
+/* 煙と名前 */
 .smoke {
   position: relative;
-  width: 140px;
-  height: 140px;
+  width: 180px;
+  height: 100px;
   margin-bottom: 10px;
   z-index: 1;
+  overflow: visible;
 }
 .smoke::before,
 .smoke::after {
@@ -107,7 +110,7 @@
   position: absolute;
   left: 50%;
   bottom: 0;
-  width: 70px;
+  width: 90px;
   height: 70px;
   background: radial-gradient(
     circle,
@@ -118,10 +121,11 @@
   transform: translateX(-50%) scale(1);
   animation: smoke-move 4s infinite ease-in-out;
   filter: blur(2px);
+  z-index: 2;
 }
 .smoke::after {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 90px;
   opacity: 0.4;
   animation-delay: 2s;
   filter: blur(4px);
@@ -149,7 +153,7 @@
 .smoke-text {
   position: absolute;
   left: 50%;
-  top: 40%;
+  top: 50%;
   transform: translate(-50%, -50%);
   font-size: 2.2rem;
   color: #444;
@@ -158,6 +162,8 @@
   font-weight: bold;
   text-shadow: 0 0 16px #fff, 0 0 32px #ccc, 0 0 8px #b0aeb1;
   letter-spacing: 0.1em;
+  white-space: nowrap;
+  z-index: 3;
 }
 
 @keyframes name-fade {
