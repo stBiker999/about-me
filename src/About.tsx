@@ -3,10 +3,6 @@ import React from "react";
 const About: React.FC = () => {
   return (
     <div className="shisha-container">
-      <div className="shisha-body">
-        <div className="shisha-base"></div>
-        <div className="shisha-neck"></div>
-      </div>
       <div className="smoke">
         <span className="smoke-text">Sota Kimura</span>
       </div>

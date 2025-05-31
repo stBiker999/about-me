@@ -41,66 +41,13 @@
   color: #888;
 }
 
-/* シーシャ本体 */
-.shisha-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 40px;
-  min-height: 100vh;
-  background: linear-gradient(180deg, #e0e7ef 0%, #f7f7fa 100%);
-}
+/* シーシャ本体関連のCSSを削除 */
 
-.shisha-body {
-  position: relative;
-  width: 70px;
-  height: 130px;
-  margin-bottom: 0px;
-  z-index: 2;
-}
-.shisha-base {
-  width: 70px;
-  height: 45px;
-  background: radial-gradient(circle at 60% 60%, #b0aeb1 60%, #7e7b7c 100%);
-  border-radius: 0 0 35px 35px;
-  position: absolute;
-  bottom: 0;
-  box-shadow: 0 8px 16px 0 #b0aeb1aa;
-  border-bottom: 4px solid #888;
-}
-.shisha-neck {
-  width: 18px;
-  height: 70px;
-  background: linear-gradient(180deg, #b0aeb1 60%, #e0e7ef 100%);
-  border-radius: 12px;
-  position: absolute;
-  left: 26px;
-  top: 5px;
-  border: 2px solid #888;
-}
-
-/* ホース装飾 */
-.shisha-body::after {
-  content: "";
-  position: absolute;
-  left: 60px;
-  top: 60px;
-  width: 40px;
-  height: 40px;
-  border: 4px solid #b0aeb1;
-  border-radius: 0 0 40px 40px;
-  border-top: none;
-  border-left: none;
-  transform: rotate(20deg);
-  opacity: 0.7;
-}
-
-/* 煙と名前 */
 .smoke {
   position: relative;
-  width: 180px;
-  height: 100px;
-  margin-bottom: 10px;
+  width: 220px;
+  height: 120px;
+  margin: 60px auto 20px auto;
   z-index: 1;
   overflow: visible;
 }
@@ -110,8 +57,8 @@
   position: absolute;
   left: 50%;
   bottom: 0;
-  width: 90px;
-  height: 70px;
+  width: 120px;
+  height: 90px;
   background: radial-gradient(
     circle,
     rgba(200, 200, 200, 0.5) 60%,
@@ -120,15 +67,15 @@
   border-radius: 50%;
   transform: translateX(-50%) scale(1);
   animation: smoke-move 4s infinite ease-in-out;
-  filter: blur(2px);
+  filter: blur(4px);
   z-index: 2;
 }
 .smoke::after {
-  width: 120px;
-  height: 90px;
-  opacity: 0.4;
+  width: 180px;
+  height: 120px;
+  opacity: 0.3;
   animation-delay: 2s;
-  filter: blur(4px);
+  filter: blur(8px);
 }
 
 @keyframes smoke-move {
@@ -155,13 +102,13 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   color: #444;
   opacity: 0;
   animation: name-fade 3s 1.5s forwards;
   font-weight: bold;
   text-shadow: 0 0 16px #fff, 0 0 32px #ccc, 0 0 8px #b0aeb1;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
   white-space: nowrap;
   z-index: 3;
 }
