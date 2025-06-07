@@ -49,7 +49,12 @@ const SNS = () => (
       >
         <FaXTwitter size={48} color="#fff" />
       </a>
-      <a href="#" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+      <a
+        href="https://github.com/stBiker999"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub"
+      >
         <FaGithub size={48} color="#fff" />
       </a>
     </div>
