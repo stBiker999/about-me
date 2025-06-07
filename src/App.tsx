@@ -1,7 +1,9 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import About from "./About";
-import { FaInstagram, FaTwitter, FaGithub } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { SiInstagram } from "react-icons/si";
 
 const Detail = () => (
   <div className="shisha-container">
@@ -30,15 +32,22 @@ const SNS = () => (
         rel="noopener noreferrer"
         aria-label="Instagram"
       >
-        <FaInstagram size={48} color="#E4405F" />
+        <SiInstagram size={48} style={{ fill: "url(#ig-gradient)" }} />
+        <svg width="0" height="0">
+          <linearGradient id="ig-gradient" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stopColor="#f9ce34" />
+            <stop offset="50%" stopColor="#ee2a7b" />
+            <stop offset="100%" stopColor="#6228d7" />
+          </linearGradient>
+        </svg>
       </a>
       <a
-        href="#"
+        href="https://x.com/Nniki_Rider"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Twitter"
+        aria-label="X (旧Twitter)"
       >
-        <FaTwitter size={48} color="#1DA1F2" />
+        <FaXTwitter size={48} color="#fff" />
       </a>
       <a href="#" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
         <FaGithub size={48} color="#fff" />
