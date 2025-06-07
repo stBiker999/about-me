@@ -15,8 +15,8 @@ const Detail = () => (
         経歴：2022年からエンジニア学生。Web開発・デザイン・IoTにも興味あり。
       </li>
       <li>得意分野：React, TypeScript, CSS, Java, Python</li>
-      <li>好きな音楽：Lo-fi, Chill, J-POP</li>
-      <li>好きな場所：夜のカフェ、シーシャバー、海沿い</li>
+      <li>好きな音楽：HIPHOP</li>
+      <li>好きな場所：シーシャバー、居酒屋、パチ屋</li>
     </ul>
     <p>もっと詳しい話やコラボ依頼はSNSやお問い合わせからどうぞ！</p>
   </div>
@@ -64,29 +64,26 @@ const SNS = () => (
 const Contact = () => (
   <div className="shisha-container">
     <h1>お問い合わせ・連絡先</h1>
-    <ul className="about-list">
-      <li>
-        メール:{" "}
-        <a href="mailto:sota.kimura@example.com">sota.kimura@example.com</a>
-      </li>
-      <li>
-        Instagram DM:{" "}
-        <a
-          href="https://www.instagram.com/kimur_ninja250/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          @kimur_ninja250
-        </a>
-      </li>
-      <li>
-        Twitter DM:{" "}
-        <a href="#" target="_blank" rel="noopener noreferrer">
-          @sota_kimura
-        </a>
-      </li>
-    </ul>
-    <p>お仕事・コラボ・ご相談などお気軽にご連絡ください。</p>
+    <form
+      className="contact-form"
+      action="mailto:sota.kimura@example.com"
+      method="POST"
+      encType="text/plain"
+    >
+      <div className="form-group">
+        <label htmlFor="name">お名前</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div className="form-group">
+        <label htmlFor="email">メールアドレス</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div className="form-group">
+        <label htmlFor="message">お問い合わせ内容</label>
+        <textarea id="message" name="message" rows={5} required></textarea>
+      </div>
+      <button type="submit">送信</button>
+    </form>
   </div>
 );
 
