@@ -360,11 +360,15 @@ h3 {
   border-radius: 12px;
   box-shadow: 0 2px 16px #1e90ff33;
   padding: 32px 28px 24px 28px;
-  max-width: 420px;
+  max-width: 800px;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 18px;
+  align-items: center;
 }
 .form-group {
   display: flex;
@@ -375,23 +379,44 @@ h3 {
 .contact-form label {
   color: #b8e0ff;
   font-weight: bold;
-  font-size: 1.05em;
+  font-size: 1.18em;
   margin-bottom: 2px;
 }
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 10px 12px;
-  border-radius: 6px;
-  border: 1px solid #1e90ff44;
+  padding: 18px 18px;
+  border-radius: 8px;
+  border: 1.5px solid #1e90ff44;
   background: #23243a;
   color: #e0e7ef;
-  font-size: 1em;
-  margin-bottom: 4px;
+  font-size: 1.25em;
+  margin-bottom: 8px;
   box-sizing: border-box;
 }
 .contact-form textarea {
+  min-height: 220px;
   resize: none;
+  width: 100%;
+  max-width: 100%;
+  font-size: 1.25em;
+  padding: 22px 22px;
+  margin: 0 auto 12px auto;
+  display: block;
+  box-sizing: border-box;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"] {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto 12px auto;
+  display: block;
+  box-sizing: border-box;
+}
+@media (max-width: 900px) {
+  .contact-form {
+    max-width: 98vw;
+  }
 }
 .contact-form input:focus,
 .contact-form textarea:focus {

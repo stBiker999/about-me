@@ -63,7 +63,7 @@ const SNS = () => (
 
 const Contact = () => (
   <div className="shisha-container">
-    <h1>お問い合わせ・連絡先</h1>
+    <h1>お問い合わせ</h1>
     <form
       className="contact-form"
       action="mailto:sota.kimura@example.com"
