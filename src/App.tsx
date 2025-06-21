@@ -8,17 +8,28 @@ import { SiInstagram } from "react-icons/si";
 const Detail = () => (
   <div className="shisha-container">
     <h1>自己紹介（詳細）</h1>
-    <ul className="about-list">
-      <li>名前：木村 颯汰（Sota Kimura）</li>
-      <li>趣味：バイク、シーシャ、酒、カメラ、旅行</li>
-      <li>
-        経歴：2022年からエンジニア学生。Web開発・デザイン・IoTにも興味あり。
-      </li>
-      <li>得意分野：React, TypeScript, CSS, Java, Python</li>
-      <li>好きな音楽：HIPHOP</li>
-      <li>好きな場所：シーシャバー、居酒屋、パチ屋</li>
-    </ul>
-    <p>もっと詳しい話やコラボ依頼はSNSやお問い合わせからどうぞ！</p>
+    <div className="detail-media-flex">
+      <img
+        src="/public/sample-photo.jpg"
+        alt="プロフィール写真"
+        className="detail-photo"
+      />
+      <div className="about-detail-text">
+        <ul className="about-list">
+          <li>名前：木村 颯汰（Sota Kimura）</li>
+          <li>趣味：バイク、シーシャ、酒</li>
+          <li>経歴：2022年からエンジニア学生。Web開発・Webデザイン。</li>
+          <li>得意分野：HTML, CSS, Java</li>
+          <li>好きな音楽：HIPHOP</li>
+          <li>好きな場所：シーシャバー、居酒屋、パチ屋</li>
+        </ul>
+        <video
+          src="/public/sample-movie.mp4"
+          controls
+          className="detail-video"
+        />
+      </div>
+    </div>
   </div>
 );
 
@@ -99,18 +110,9 @@ function App() {
         <Route
           path="/"
           element={
-            <div className="home-shisha-bg">
-              <div className="smoke home-smoke"></div>
-              <div
-                className="smoke home-smoke"
-                style={{ animationDelay: "1.5s" }}
-              ></div>
-              <div
-                className="smoke home-smoke"
-                style={{ animationDelay: "3s" }}
-              ></div>
-              <div className="neon-circle"></div>
-              <div className="neon-circle neon-circle2"></div>
+            <div className="home-bike-bg">
+              <div className="bike-title">BIKE LIFE</div>
+              <div className="bike-sub">バイクと共に走る毎日</div>
             </div>
           }
         />

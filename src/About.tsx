@@ -24,7 +24,7 @@ const About: React.FC = () => {
       </div>
       <div className="smoke">
         <span className="smoke-text" style={{ animationDelay: "6s" }}>
-          救いようがないクズですが、よろしくお願いします
+          ふっ軽な人なので遊びの誘いはいつでも大歓迎
         </span>
       </div>
     </div>
